@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:minha_estante_app/domain/entities/entity_user_type.dart';
 
-/// this entity represents the logged user, contains all the necessary
-/// data to its UI and for app configuration
-class User{
+/// this is the User DTO, contains the data from USER and USER DATA
+/// database tables
+class UserDTO{
+
+  /// **** USE DEFAULT DATA
 
   //user identification
   String id;
@@ -31,8 +33,21 @@ class User{
   // user theme
   ThemeMode themeMode;
 
+  /// **** USER DATA
+
+  // number of all the publications done by the user
+  int publicationsTotal;
+
+  // number of books read every year
+  Map<String, int> booksPerYear;
+
+  
+
+
+
+
   //default constructor
-  User(this.id, this.firstName, this.secondName, this.description,
+  UserDTO(this.id, this.firstName, this.secondName, this.description,
       this.currentInstitition, this.pastInstitutions, this.profilePicturePath,
       this.userType, this.themeMode);
 
