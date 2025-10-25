@@ -1,0 +1,1 @@
+/// this entity represents the logged user
